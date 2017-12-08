@@ -11,7 +11,7 @@ const withTheme = theme => ({
 })
 
 const hoc = el => {
-  const newProps = Object.assign({}, el.props || {}, { system })
+  const newProps = Object.assign({}, system, el.props || {})
 
   return Object.assign({}, el, { props: newProps })
 }
