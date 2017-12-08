@@ -24,29 +24,33 @@ Vue.mixin(withTheme(theme))
 
 ##### Adding styled-system props
 
+Since Vue requires all props to be defined, you can call the default function to assign all props that are missing defaults:
 
 ```js
-<template>
-  <button :style='sx'>
-    <slot></slot>
-  </button>
-<template>
+import { color, space, fontSize, width } from 'styled-system'
+import styled from 'vue-styled-components'
+import system from 'vue-styled-system'
+import theme from '../../theme.json'
 
-<script>
-import styled, {
-  space,
-  fontSize,
-  width,
-  color
-} from 'vue-styled-components'
+const NewButton = styled('button', system({
+  px: { default: 4 },
+  py: { default: 2 },
+  color: { default: 'white' },
+  bg: { default: 'blue' },
+  theme: { default: theme }
+}))`
+  display: inline-block;
+  font-family: inherit;
+  border-width: 0px;
+  border-radius: 4px;
+  appearance: none;
+  ${color}
+  ${space}
+  ${fontSize}
+  ${width}
+`
 
-export default styled({
-  name: 'MyButton'
-})
-
-</script>
-
-<style scoped></style>
+export default NewButton
 ```
 
 ## License
