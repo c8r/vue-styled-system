@@ -1,13 +1,6 @@
-const {
-  space,
-  fontSize,
-  width,
-  color
-} = require('styled-system')
-
 const system = require('./system')
 
-const withTheme = theme => ({
+module.exports.withTheme = theme => ({
   data () {
     return {
       get theme () {
@@ -31,17 +24,8 @@ const sx = props => {
   ].reduce((acc, curr) => Object.assign({}, acc, curr))
 }
 
-const hoc = el => {
+module.exports = el => {
   const newProps = Object.assign({}, el.props || {}, { system })
 
   return Object.assign({}, el, { props: newProps })
 }
-
-module.exports = hoc
-module.exports.withTheme = withTheme
-
-// Export styled-system functions for convenience
-module.exports.space = space
-module.exports.fontSize = fontSize
-module.exports.width = width
-module.exports.color = color
