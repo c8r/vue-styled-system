@@ -1,8 +1,15 @@
-import test from 'ava'
-import vueStyledSystem from './'
+const test = require('ava')
+const system = require('./')
+const { withTheme } = require('./' )
 
-test('vue-styled-system does something awesome', t => {
-  t.plan(1)
+const FIXTURE = {
+  name: 'foo',
+  props: {
+    bg: {
+      default: 'blue'
+    }
+  }
+}
 
-  t.true(vueStyledSystem())
-})
+test('system assigns system props', t => t.snapshot(system(FIXTURE)))
+test('withTheme adds a theme global mixin', t => t.snapshot(withTheme({})))

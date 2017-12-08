@@ -1,6 +1,6 @@
 const system = require('./system')
 
-module.exports.withTheme = theme => ({
+const withTheme = theme => ({
   data () {
     return {
       get theme () {
@@ -10,8 +10,11 @@ module.exports.withTheme = theme => ({
   }
 })
 
-module.exports = el => {
+const hoc = el => {
   const newProps = Object.assign({}, el.props || {}, { system })
 
   return Object.assign({}, el, { props: newProps })
 }
+
+module.exports = hoc
+module.exports.withTheme = withTheme

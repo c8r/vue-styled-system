@@ -9,7 +9,7 @@
     "system.js"
   ],
   "scripts": {
-    "test": "ava"
+    "test": "ava -v"
   },
   "repository": "c8r/vue-styled-system",
   "keywords": [
