@@ -1,0 +1,20 @@
+{
+  "name": "vue-styled-system",
+  "description": "Design system utilities for Vue",
+  "author": "Compositor",
+  "version": "0.1.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": "c8r/vue-styled-system",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "*"
+  }
+}
