@@ -1,5 +1,5 @@
 module.exports = {
-  bg: String
+  bg: String,
   backgroundColor: String,
   borderColor: String,
   color: String,

@@ -4,7 +4,8 @@ const {
   width,
   color
 } = require('styled-system')
-const styleSystemProps = require('./styled-system-props')
+
+const system = require('./system')
 
 const withTheme = theme => ({
   data () {
@@ -31,10 +32,9 @@ const sx = props => {
 }
 
 const hoc = el => {
-  const props = Object.keys(el.props || {})
-  const newProps = Object.assign({}, props, styledSystemProps)
+  const newProps = Object.assign({}, el.props || {}, { system })
 
-  return Object.assign({}, el, { props }, { sx })
+  return Object.assign({}, el, { props: newProps })
 }
 
 module.exports = hoc
