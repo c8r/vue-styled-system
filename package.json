@@ -2,7 +2,7 @@
   "name": "vue-styled-system",
   "description": "Design system utilities for Vue",
   "author": "Compositor",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.js",
   "files": [
     "index.js",
