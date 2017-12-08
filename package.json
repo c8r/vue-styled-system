@@ -13,8 +13,10 @@
   "repository": "c8r/vue-styled-system",
   "keywords": [],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "styled-system": "^1.1.0"
+  },
   "devDependencies": {
-    "ava": "*"
+    "ava": "^0.24.0"
   }
 }

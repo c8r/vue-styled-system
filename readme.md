@@ -4,18 +4,49 @@ Design system utilities for Vue based on [styled-system](https://github.com/jxnb
 
 ## Installation
 
-```bash
+```sh
 npm i -S vue-styled-system
 ```
 
 ## Usage
 
-```javascript
+##### Passing theme context to components
+
+In order to allow components to access the theme, you can declare a global mixin using `withTheme`.
+
+```js
 import Vue from 'vue'
 import { withTheme } from 'vue-styled-system'
 import theme from './theme.json'
 
 Vue.mixin(withTheme(theme))
+```
+
+##### Adding styled-system props
+
+
+```js
+<template>
+  <button :style='sx'>
+    <slot></slot>
+  </button>
+<template>
+
+<script>
+import styled, {
+  space,
+  fontSize,
+  width,
+  color
+} from 'vue-styled-components'
+
+export default styled({
+  name: 'MyButton'
+})
+
+</script>
+
+<style scoped></style>
 ```
 
 ## License
