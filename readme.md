@@ -30,9 +30,9 @@ Since Vue requires all props to be defined, you can call the default function to
 import { color, space, fontSize, width } from 'styled-system'
 import styled from 'vue-styled-components'
 import system from 'vue-styled-system'
-import theme from '../../theme.json'
+import theme from './theme.json'
 
-const NewButton = styled('button', system({
+export default styled('button', system({
   px: { default: 4 },
   py: { default: 2 },
   color: { default: 'white' },
@@ -49,8 +49,6 @@ const NewButton = styled('button', system({
   ${fontSize}
   ${width}
 `
-
-export default NewButton
 ```
 
 ## License
@@ -65,4 +63,7 @@ MIT
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-Made by [Compositor](https://twitter.com/getcompositor)).
+
+[Made by Compositor](https://compositor.io)
+|
+[MIT License](LICENSE.md)
