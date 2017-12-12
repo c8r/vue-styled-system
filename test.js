@@ -3,11 +3,8 @@ const system = require('./')
 const { withTheme } = require('./' )
 
 const FIXTURE = {
-  name: 'foo',
-  props: {
-    bg: {
-      default: 'blue'
-    }
+  bg: {
+    default: 'blue'
   }
 }
 

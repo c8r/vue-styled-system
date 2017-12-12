@@ -5,7 +5,7 @@ module.exports = {
   color: String,
 
   borderRadius: Number,
-  borderWidths: Number,
+  borderWidth: Number,
 
   f: [Number, Array],
   fontSize: [Number, Array],
